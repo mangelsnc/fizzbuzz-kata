@@ -27,5 +27,26 @@ class FizzBuzz
 
     public static function getReplacement($value)
     {
+        if (self::isFizzBuzz($value)) {
+            return 'FizzBuzz';
+        }
+
+        if (self::isFizz($value)) {
+            return 'Fizz';
+        }
+
+        if (self::isBuzz($value)) {
+            return 'Buzz';
+        }
+
+        return $value;
+    }
+
+    public static function getList()
+    {
+        for ($number=1; $number<=self::TOTAL_ITEMS; $number++) {
+            echo self::getReplacement($number);
+            echo "\n";
+        }
     }
 }
