@@ -21,6 +21,6 @@ class FizzBuzz
 
     public function isFizzBuzz($value)
     {
-        
+        return $this->isFizz($value) && $this->isBuzz($value);
     }
 }
