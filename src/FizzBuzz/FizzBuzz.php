@@ -24,4 +24,8 @@ class FizzBuzz
     {
         return self::isFizz($value) && self::isBuzz($value);
     }
+
+    public static function getReplacement($value)
+    {
+    }
 }
