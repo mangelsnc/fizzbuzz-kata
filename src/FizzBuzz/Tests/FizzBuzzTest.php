@@ -26,4 +26,26 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
             [18, true],
         ];
     }
+
+    /**
+     * @test
+     * @dataProvider buzzNumbersProvider
+     */
+    public function itShouldReturnBuzzIfDivisibleByThree($value, $expected)
+    {
+        $fizzBuzz = new FizzBuzz();
+
+        $this->assertEquals($expected, $fizzBuzz->isBuzz($value));
+    }
+
+    public function buzzNumbersProvider()
+    {
+        return [
+            [5, true],
+            [10, true],
+            [15, true],
+            [20, true],
+            [25, true],
+        ];
+    }
 }

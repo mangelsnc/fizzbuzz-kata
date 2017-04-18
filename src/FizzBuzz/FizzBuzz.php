@@ -12,4 +12,9 @@ class FizzBuzz
     {
         return 0 === $value % self::FIZZ_FACTOR;
     }
+
+    public function isBuzz($value)
+    {
+        
+    }
 }
