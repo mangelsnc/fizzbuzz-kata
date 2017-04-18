@@ -6,5 +6,7 @@ namespace FizzBuzz;
  */
 class FizzBuzz
 {
-
+    public function isFizz($value)
+    {
+    }
 }
