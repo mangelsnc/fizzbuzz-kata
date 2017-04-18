@@ -8,19 +8,20 @@ class FizzBuzz
 {
     const FIZZ_FACTOR = 3;
     const BUZZ_FACTOR = 5;
+    const TOTAL_ITEMS = 100;
 
-    public function isFizz($value)
+    public static function isFizz($value)
     {
         return 0 === $value % self::FIZZ_FACTOR;
     }
 
-    public function isBuzz($value)
+    public static function isBuzz($value)
     {
         return 0 === $value % self::BUZZ_FACTOR;
     }
 
-    public function isFizzBuzz($value)
+    public static function isFizzBuzz($value)
     {
-        return $this->isFizz($value) && $this->isBuzz($value);
+        return self::isFizz($value) && self::isBuzz($value);
     }
 }

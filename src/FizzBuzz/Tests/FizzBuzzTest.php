@@ -11,9 +11,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
      */
     public function itShouldReturnFizzIfDivisibleByThree($value, $expected)
     {
-        $fizzBuzz = new FizzBuzz();
-
-        $this->assertEquals($expected, $fizzBuzz->isFizz($value));
+        $this->assertEquals($expected, FizzBuzz::isFizz($value));
     }
 
     public function fizzNumbersProvider()
@@ -33,9 +31,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
      */
     public function itShouldReturnBuzzIfDivisibleByFive($value, $expected)
     {
-        $fizzBuzz = new FizzBuzz();
-
-        $this->assertEquals($expected, $fizzBuzz->isBuzz($value));
+        $this->assertEquals($expected, FizzBuzz::isBuzz($value));
     }
 
     public function buzzNumbersProvider()
@@ -55,9 +51,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
      */
     public function itShouldReturnFizzBuzzIfDivisibleByBothThreeAndFive($value, $expected)
     {
-        $fizzBuzz = new FizzBuzz();
-
-        $this->assertEquals($expected, $fizzBuzz->isFizzBuzz($value));
+        $this->assertEquals($expected, FizzBuzz::isFizzBuzz($value));
     }
 
     public function fizzBuzzNumbersProvider()
