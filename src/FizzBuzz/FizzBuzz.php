@@ -6,8 +6,10 @@ namespace FizzBuzz;
  */
 class FizzBuzz
 {
+    const FIZZ_FACTOR = 3;
+
     public function isFizz($value)
     {
-        return 0 === $value % 3;
+        return 0 === $value % self::FIZZ_FACTOR;
     }
 }
