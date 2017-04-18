@@ -5,6 +5,7 @@ namespace FizzBuzz;
 class BuzzRule implements RuleInterface
 {
     const FACTOR = 5;
+    const PRIORITY = 3;
 
     public function match($value)
     {
@@ -14,5 +15,10 @@ class BuzzRule implements RuleInterface
     public function getReplacement()
     {
         return 'Buzz';
+    }
+
+    public function getPriority()
+    {
+        return self::PRIORITY;
     }
 }

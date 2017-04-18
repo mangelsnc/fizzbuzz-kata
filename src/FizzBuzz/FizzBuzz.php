@@ -7,31 +7,38 @@ namespace FizzBuzz;
 class FizzBuzz
 {
     const TOTAL_ITEMS = 100;
+    private $rules = [];
 
-    public static function getReplacement($value)
+    public function addRule(RuleInterface $rule)
     {
-        $fizzBuzzRule = new FizzBuzzRule();
-        if ($fizzBuzzRule->match($value)) {
-            return $fizzBuzzRule->getReplacement();
-        }
+        $this->rules[$rule->getPriority()][] = $rule;
+        ksort($this->rules);
+        
+        return $this;
+    }
 
-        $fizzRule = new FizzRule();
-        if ($fizzRule->match($value)) {
-            return $fizzRule->getReplacement();
-        }
+    public function getRules()
+    {
+        return $this->rules;
+    }
 
-        $buzzRule = new BuzzRule();
-        if ($buzzRule->match($value)) {
-            return $buzzRule->getReplacement();
+    public function getReplacement($value)
+    {
+        foreach ($this->rules as $ruleSet) {
+            foreach ($ruleSet as $rule) {
+                if ($rule->match($value)) {
+                    return $rule->getReplacement();
+                }
+            }
         }
 
         return $value;
     }
 
-    public static function getList()
+    public function getList()
     {
         for ($number=1; $number<=self::TOTAL_ITEMS; $number++) {
-            echo self::getReplacement($number);
+            echo $this->getReplacement($number);
             echo "\n";
         }
     }
