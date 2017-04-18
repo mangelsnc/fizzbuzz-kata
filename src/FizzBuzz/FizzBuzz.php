@@ -15,6 +15,6 @@ class FizzBuzz
 
     public function isBuzz($value)
     {
-        
+        return 0 === $value % 5;
     }
 }
