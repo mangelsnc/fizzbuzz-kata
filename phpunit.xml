@@ -27,7 +27,7 @@
         <whitelist>
             <directory>./src/FizzBuzz/</directory>
             <exclude>
-                <directory>./src/FizzBuzz/*/Tests</directory>
+                <directory suffix=".php">./src/FizzBuzz/Tests</directory>
             </exclude>
         </whitelist>
     </filter>

@@ -2,9 +2,9 @@
 namespace FizzBuzz;
 
 /**
- * Class FizzBuzz
+ * Class ListGenerator
  */
-class FizzBuzz
+class ListGenerator
 {
     const TOTAL_ITEMS = 100;
     private $rules = [];

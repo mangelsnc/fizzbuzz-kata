@@ -4,28 +4,33 @@ namespace FizzBuzz;
 
 class FizzBuzzRule implements RuleInterface
 {
-    const FIZZ_FACTOR = 3;
-    const BUZZ_FACTOR = 5;
+    const FIZZBUZZ_FACTOR = 15;
     const PRIORITY = 1;
 
+    /**
+     * @param $value
+     * @return bool
+     */
     public function match($value)
     {
-        if (
-            0 === $value % self::FIZZ_FACTOR
-            &&
-            0 === $value % self::BUZZ_FACTOR
-        ) {
+        if (0 === $value % self::FIZZBUZZ_FACTOR) {
             return true;
         }
 
         return false;
     }
 
+    /**
+     * @return string
+     */
     public function getReplacement()
     {
         return 'FizzBuzz';
     }
 
+    /**
+     * @return int
+     */
     public function getPriority()
     {
         return self::PRIORITY;

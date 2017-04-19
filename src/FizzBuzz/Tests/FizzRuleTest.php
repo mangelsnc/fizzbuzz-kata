@@ -16,6 +16,9 @@ class FizzRuleTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $fizzRule->match($value));
     }
 
+    /**
+     * @return array
+     */
     public function fizzNumbersProvider()
     {
         return [

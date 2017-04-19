@@ -16,6 +16,9 @@ class BuzzRuleTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $buzzRule->match($value));
     }
 
+    /**
+     * @return array
+     */
     public function buzzNumbersProvider()
     {
         return [
